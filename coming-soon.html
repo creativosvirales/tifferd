@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Prestige USA | Muy pronto</title>
+<meta name="description" content="Estamos preparando la experiencia Royal Prestige para Estados Unidos. Vuelve pronto o escríbenos por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#111111;
+    --black-2:#1b1b1b;
+    --red:#c8102e;
+    --red-soft:#3a0f16;
+    --steel:#c9cdd1;
+    --steel-dim:#8b9096;
+    --white:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{height:100%;}
+  body{
+    background:radial-gradient(120% 140% at 50% 0%, var(--black-2) 0%, var(--black) 60%);
+    color:var(--white);
+    font-family:'Work Sans', system-ui, sans-serif;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:32px 20px;
+    overflow-x:hidden;
+  }
+  .logo{height:34px;margin-bottom:56px;filter:brightness(0) invert(1);opacity:.92;}
+
+  .stage{
+    position:relative;
+    width:220px;
+    height:190px;
+    margin-bottom:20px;
+  }
+
+  /* pot */
+  .pot{
+    position:absolute;bottom:18px;left:50%;transform:translateX(-50%);
+    width:150px;height:78px;
+  }
+  .pot svg{width:100%;height:100%;display:block;}
+
+  /* steam */
+  .steam{position:absolute;bottom:78px;left:50%;transform:translateX(-50%);width:150px;height:120px;pointer-events:none;}
+  .wisp{
+    position:absolute;bottom:0;width:14px;height:14px;border-radius:50%;
+    background:radial-gradient(circle at 30% 30%, rgba(255,255,255,.55), rgba(255,255,255,0) 70%);
+    filter:blur(1px);
+    animation:rise 3.2s ease-in infinite;
+  }
+  .wisp:nth-child(1){left:38px;animation-delay:0s;}
+  .wisp:nth-child(2){left:66px;animation-delay:.8s;width:11px;height:11px;}
+  .wisp:nth-child(3){left:94px;animation-delay:1.6s;}
+  .wisp:nth-child(4){left:56px;animation-delay:2.3s;width:10px;height:10px;}
+
+  @keyframes rise{
+    0%{opacity:0;transform:translateY(0) scale(.6);}
+    15%{opacity:.75;}
+    100%{opacity:0;transform:translateY(-95px) scale(1.6);}
+  }
+
+  h1{
+    font-family:'Big Shoulders Display', system-ui, sans-serif;
+    font-weight:800;
+    font-size:clamp(2.1rem, 6vw, 3.6rem);
+    text-transform:uppercase;
+    letter-spacing:.01em;
+    line-height:1.02;
+    text-wrap:balance;
+    margin-bottom:16px;
+  }
+  h1 span{color:var(--red);}
+
+  .subhead{
+    color:var(--steel);
+    font-size:1.02rem;
+    max-width:460px;
+    margin-bottom:34px;
+    line-height:1.55;
+  }
+
+  .status{
+    display:inline-flex;align-items:center;gap:10px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.12);
+    padding:9px 18px;border-radius:30px;
+    font-size:.85rem;color:var(--steel);
+    margin-bottom:40px;
+    min-width:290px;
+    justify-content:center;
+  }
+  .status .led{
+    width:8px;height:8px;border-radius:50%;background:var(--red);
+    box-shadow:0 0 0 0 rgba(200,16,46,.6);
+    animation:pulse 1.8s ease-out infinite;
+    flex-shrink:0;
+  }
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(200,16,46,.55);}
+    70%{box-shadow:0 0 0 9px rgba(200,16,46,0);}
+    100%{box-shadow:0 0 0 0 rgba(200,16,46,0);}
+  }
+  #status-text{font-family:'Work Sans';}
+
+  .cta-group{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:56px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:14px 26px;border-radius:30px;font-weight:600;font-size:.94rem;
+    text-decoration:none;transition:transform .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--red);color:#fff;}
+  .btn-outline{border:1.5px solid rgba(255,255,255,.35);color:#fff;}
+
+  .flags{display:flex;gap:8px;opacity:.8;margin-bottom:14px;}
+  .flags img{width:22px;border-radius:3px;}
+
+  footer{color:var(--steel-dim);font-size:.76rem;max-width:420px;line-height:1.6;}
+
+  @media (prefers-reduced-motion: reduce){
+    .wisp, .status .led{animation:none;}
+  }
+</style>
+</head>
+<body>
+
+  <img class="logo" src="https://raw.githubusercontent.com/creativosvirales/tifferd/master/assets/img/logo-royal-prestige.png" alt="Royal Prestige">
+
+  <div class="stage">
+    <div class="steam">
+      <div class="wisp"></div>
+      <div class="wisp"></div>
+      <div class="wisp"></div>
+      <div class="wisp"></div>
+    </div>
+    <div class="pot">
+      <svg viewBox="0 0 150 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10" y="0" width="130" height="10" rx="5" fill="#c8102e"/>
+        <path d="M18 12 H132 L124 70 Q122 76 116 76 H34 Q28 76 26 70 L18 12 Z" fill="#e7e9eb"/>
+        <path d="M18 12 H132 L124 70 Q122 76 116 76 H34 Q28 76 26 70 L18 12 Z" fill="url(#steelgrad)" fill-opacity="0.9"/>
+        <rect x="0" y="24" width="16" height="9" rx="4" fill="#1b1b1b"/>
+        <rect x="134" y="24" width="16" height="9" rx="4" fill="#1b1b1b"/>
+        <defs>
+          <linearGradient id="steelgrad" x1="18" y1="12" x2="132" y2="76" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#f4f6f7"/>
+            <stop offset="0.5" stop-color="#c9cdd1"/>
+            <stop offset="1" stop-color="#eef0f1"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+  </div>
+
+  <h1>Algo grande se<br>está <span>cocinando</span></h1>
+  <p class="subhead">Estamos preparando la nueva experiencia Royal Prestige para Estados Unidos: catálogo, cupones y financiamiento en un solo lugar. Vuelve pronto.</p>
+
+  <div class="status"><span class="led"></span><span id="status-text">Puliendo el acero inoxidable…</span></div>
+
+  <div class="cta-group">
+    <a id="wa-cta" href="#" target="_blank" rel="noopener" class="btn btn-primary">💬 Escríbenos por WhatsApp</a>
+    <a href="mailto:info@prestigesolution.us" class="btn btn-outline">Contactar por correo</a>
+  </div>
+
+  <div class="flags">
+    <img src="https://raw.githubusercontent.com/creativosvirales/tifferd/master/assets/img/flag-usa.png" alt="EE.UU.">
+    <img src="https://raw.githubusercontent.com/creativosvirales/tifferd/master/assets/img/flag-mexico.png" alt="México">
+    <img src="https://raw.githubusercontent.com/creativosvirales/tifferd/master/assets/img/flag-colombia.png" alt="Colombia">
+    <img src="https://raw.githubusercontent.com/creativosvirales/tifferd/master/assets/img/flag-peru.png" alt="Perú">
+    <img src="https://raw.githubusercontent.com/creativosvirales/tifferd/master/assets/img/flag-rd.png" alt="República Dominicana">
+  </div>
+
+  <footer>© <span id="year"></span> Royal Prestige. Sitio de distribuidor independiente autorizado en EE.UU. Royal Prestige® es marca registrada de sus respectivos propietarios.</footer>
+
+<script>
+  var WHATSAPP_NUMBER = "15555555555"; // TODO: reemplaza por el número real del equipo
+  document.getElementById('wa-cta').href = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent("Hola, vi que están preparando el sitio de Royal Prestige y quiero información.");
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  var messages = [
+    "Puliendo el acero inoxidable…",
+    "Afilando los cuchillos…",
+    "Sirviendo los cupones de descuento…",
+    "Calentando la parrilla…",
+    "Preparando tu plan de pago…"
+  ];
+  var i = 0;
+  setInterval(function(){
+    i = (i + 1) % messages.length;
+    var el = document.getElementById('status-text');
+    el.style.opacity = 0;
+    setTimeout(function(){
+      el.textContent = messages[i];
+      el.style.transition = 'opacity .4s ease';
+      el.style.opacity = 1;
+    }, 250);
+  }, 2600);
+</script>
+
+</body>
+</html>
