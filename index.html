@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Prestige USA | Equipa tu cocina y construye tu historial crediticio</title>
+<meta name="description" content="Conoce los sistemas de cocina Royal Prestige, financiamiento flexible que reporta a las agencias de crédito, cupón de descuento y regalo de bienvenida. Distribuidor autorizado en EE.UU.">
+<style>
+  :root{
+    --rp-black:#111111;
+    --rp-red:#c8102e;
+    --rp-gray:#f4f4f4;
+    --rp-gray-dark:#5a5a5a;
+    --rp-white:#ffffff;
+    --rp-gold:#b08d57;
+    --max-w:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:'Segoe UI', Arial, Helvetica, sans-serif;
+    color:var(--rp-black);
+    background:var(--rp-white);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{text-decoration:none;color:inherit;}
+  .wrap{max-width:var(--max-w);margin:0 auto;padding:0 20px;}
+  section{padding:64px 0;}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:var(--rp-white);
+    border-bottom:1px solid #eee;
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 20px;max-width:var(--max-w);margin:0 auto;
+  }
+  .nav img{height:34px;}
+  .nav-links{display:flex;gap:28px;font-size:15px;font-weight:600;}
+  .nav-links a:hover{color:var(--rp-red);}
+  .nav-cta{
+    background:var(--rp-red);color:#fff;padding:10px 20px;border-radius:30px;
+    font-weight:700;font-size:14px;white-space:nowrap;
+  }
+  .nav-cta:hover{background:#a10d26;}
+  .burger{display:none;background:none;border:none;font-size:26px;cursor:pointer;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    min-height:560px;
+    display:flex;align-items:center;
+    background:#000 url('assets/img/hero-experiencia-usa.webp') center/cover no-repeat;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(90deg, rgba(0,0,0,.72) 0%, rgba(0,0,0,.42) 55%, rgba(0,0,0,.15) 100%);
+  }
+  .hero-content{position:relative;z-index:2;color:#fff;max-width:620px;padding:60px 20px;}
+  .eyebrow{
+    display:inline-block;background:var(--rp-red);padding:6px 14px;border-radius:20px;
+    font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-bottom:18px;
+  }
+  .hero h1{font-size:2.6rem;line-height:1.15;margin-bottom:18px;font-weight:800;}
+  .hero p{font-size:1.05rem;margin-bottom:28px;color:#f0f0f0;max-width:520px;}
+  .btn-group{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:15px 26px;border-radius:30px;font-weight:700;font-size:15px;
+    cursor:pointer;border:none;transition:transform .15s ease, background .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--rp-red);color:#fff;}
+  .btn-primary:hover{background:#a10d26;}
+  .btn-whatsapp{background:#25D366;color:#fff;}
+  .btn-whatsapp:hover{background:#1ebe5a;}
+  .btn-outline{background:transparent;color:#fff;border:2px solid #fff;}
+
+  .flags-row{
+    display:flex;align-items:center;gap:14px;margin-top:34px;font-size:13px;color:#ddd;
+  }
+  .flags-row .flags{display:flex;gap:6px;}
+  .flags-row img{width:26px;height:auto;border-radius:3px;box-shadow:0 0 0 1px rgba(255,255,255,.4);}
+
+  /* ---------- Section titles ---------- */
+  .section-head{text-align:center;max-width:680px;margin:0 auto 44px;}
+  .section-head .tag{color:var(--rp-red);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;}
+  .section-head h2{font-size:2rem;margin:10px 0 12px;font-weight:800;}
+  .section-head p{color:var(--rp-gray-dark);font-size:1rem;}
+
+  /* ---------- Benefits ---------- */
+  .benefits{background:var(--rp-gray);}
+  .benefit-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:22px;
+  }
+  .benefit-card{
+    background:#fff;border-radius:14px;padding:28px 22px;text-align:left;
+    box-shadow:0 4px 14px rgba(0,0,0,.05);
+  }
+  .benefit-card .num{
+    width:38px;height:38px;border-radius:50%;background:var(--rp-black);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:16px;
+  }
+  .benefit-card h3{font-size:1.05rem;margin-bottom:8px;}
+  .benefit-card p{font-size:.9rem;color:var(--rp-gray-dark);}
+
+  .disclaimer-box{
+    margin-top:30px;background:#fff;border:1px solid #e2b8bf;border-left:4px solid var(--rp-red);
+    padding:16px 20px;border-radius:8px;font-size:.82rem;color:#555;
+  }
+
+  /* ---------- Products ---------- */
+  .product-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:26px;
+  }
+  .product-card{
+    border:1px solid #eee;border-radius:16px;overflow:hidden;
+    transition:box-shadow .15s ease;
+  }
+  .product-card:hover{box-shadow:0 10px 26px rgba(0,0,0,.08);}
+  .product-card .img-box{background:var(--rp-gray);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+  .product-card .img-box img{width:100%;height:100%;object-fit:cover;}
+  .product-card .info{padding:20px;}
+  .product-card h3{font-size:1.1rem;margin-bottom:6px;}
+  .product-card p{font-size:.9rem;color:var(--rp-gray-dark);margin-bottom:14px;}
+  .product-card .link-btn{color:var(--rp-red);font-weight:700;font-size:.9rem;display:inline-flex;align-items:center;gap:6px;}
+
+  /* ---------- How it works ---------- */
+  .steps{background:var(--rp-black);color:#fff;}
+  .steps .section-head h2, .steps .section-head p{color:#fff;}
+  .steps .section-head p{color:#cfcfcf;}
+  .step-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+  .step-card{background:#1c1c1c;border-radius:14px;padding:26px 20px;}
+  .step-card .num{color:var(--rp-red);font-size:1.8rem;font-weight:800;margin-bottom:10px;}
+  .step-card h3{font-size:1rem;margin-bottom:8px;}
+  .step-card p{font-size:.88rem;color:#c9c9c9;}
+
+  /* ---------- Warranty banner ---------- */
+  .warranty{
+    display:flex;align-items:center;gap:40px;background:var(--rp-gray);border-radius:18px;padding:34px;
+  }
+  .warranty img{width:280px;border-radius:12px;flex-shrink:0;}
+  .warranty h3{font-size:1.4rem;margin-bottom:10px;}
+  .warranty p{color:var(--rp-gray-dark);}
+
+  /* ---------- Lead form ---------- */
+  .lead{background:linear-gradient(135deg,#141414,#2a2a2a);color:#fff;}
+  .lead-wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;}
+  .lead h2{font-size:2rem;margin-bottom:14px;font-weight:800;}
+  .lead p{color:#dcdcdc;margin-bottom:18px;}
+  .lead ul{list-style:none;margin-bottom:10px;}
+  .lead ul li{padding:6px 0;color:#e6e6e6;font-size:.95rem;display:flex;gap:8px;}
+  .lead ul li::before{content:"✓";color:#4ade80;font-weight:800;}
+
+  form.card{
+    background:#fff;color:#111;border-radius:16px;padding:30px;box-shadow:0 20px 50px rgba(0,0,0,.35);
+  }
+  form.card h3{margin-bottom:4px;font-size:1.2rem;}
+  form.card .sub{color:var(--rp-gray-dark);font-size:.88rem;margin-bottom:20px;}
+  .field{margin-bottom:14px;}
+  .field label{display:block;font-size:.82rem;font-weight:700;margin-bottom:6px;}
+  .field input, .field select{
+    width:100%;padding:11px 12px;border:1px solid #ddd;border-radius:8px;font-size:.95rem;font-family:inherit;
+  }
+  .field input:focus, .field select:focus{outline:2px solid var(--rp-red);border-color:var(--rp-red);}
+  .row-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .submit-btn{
+    width:100%;background:var(--rp-red);color:#fff;padding:14px;border:none;border-radius:8px;
+    font-weight:800;font-size:1rem;cursor:pointer;margin-top:8px;
+  }
+  .submit-btn:hover{background:#a10d26;}
+  .legal-note{font-size:.72rem;color:#888;margin-top:12px;line-height:1.4;}
+  .form-success{display:none;text-align:center;padding:20px 0;}
+  .form-success.show{display:block;}
+  .form-success h3{margin-bottom:8px;}
+
+  /* ---------- Footer ---------- */
+  footer{background:#0c0c0c;color:#aaa;padding:44px 0 20px;font-size:.85rem;}
+  .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px;margin-bottom:30px;}
+  footer h4{color:#fff;font-size:.95rem;margin-bottom:14px;}
+  footer img{height:28px;margin-bottom:14px;filter:brightness(0) invert(1);}
+  footer a{color:#aaa;display:block;margin-bottom:8px;}
+  footer a:hover{color:#fff;}
+  .footer-bottom{border-top:1px solid #262626;padding-top:18px;font-size:.75rem;color:#777;}
+  .footer-legal{margin-top:10px;font-size:.72rem;color:#666;line-height:1.6;}
+
+  /* ---------- WhatsApp floating button ---------- */
+  .wa-float{
+    position:fixed;bottom:22px;right:22px;background:#25D366;color:#fff;
+    width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    box-shadow:0 6px 18px rgba(0,0,0,.25);z-index:60;font-size:28px;
+  }
+  .wa-float:hover{background:#1ebe5a;}
+
+  @media (max-width: 900px){
+    .nav-links{display:none;}
+    .benefit-grid, .step-grid{grid-template-columns:repeat(2,1fr);}
+    .product-grid{grid-template-columns:repeat(2,1fr);}
+    .lead-wrap{grid-template-columns:1fr;}
+    .warranty{flex-direction:column;text-align:center;}
+    .warranty img{width:100%;max-width:320px;}
+    .footer-grid{grid-template-columns:1fr;}
+    .hero h1{font-size:2rem;}
+  }
+  @media (max-width: 560px){
+    .benefit-grid, .step-grid, .product-grid{grid-template-columns:1fr;}
+    .row-2{grid-template-columns:1fr;}
+    section{padding:44px 0;}
+  }
+</style>
+</head>
+<body>
+
+<!--
+  ================= CONFIGURACIÓN RÁPIDA =================
+  Antes de publicar, reemplaza estos 2 valores:
+  1) WHATSAPP_NUMBER: número en formato internacional sin "+" ni espacios (ej: 15551234567)
+  2) DOMAIN: tu dominio real, usado solo en el meta og:url de abajo
+  ==========================================================
+-->
+
+<header>
+  <div class="nav">
+    <a href="#top"><img src="assets/img/logo-royal-prestige.png" alt="Royal Prestige"></a>
+    <nav class="nav-links">
+      <a href="#beneficios">Beneficios</a>
+      <a href="#productos">Productos</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="nav-cta" href="#contacto">Solicita tu cupón</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-content">
+    <span class="eyebrow">Distribuidor autorizado en EE.UU.</span>
+    <h1>Equipa tu cocina y construye historial de crédito al mismo tiempo</h1>
+    <p>Sistemas de cocina Royal Prestige con financiamiento flexible que reporta tus pagos a las tres agencias de crédito más grandes de EE.UU. Cupón de descuento y regalo de bienvenida incluidos.</p>
+    <div class="btn-group">
+      <a href="#contacto" class="btn btn-primary">Quiero mi cupón de descuento</a>
+      <a id="wa-hero" href="#" target="_blank" rel="noopener" class="btn btn-whatsapp">💬 Hablar por WhatsApp</a>
+    </div>
+    <div class="flags-row">
+      <span>Servimos comunidad hispana en:</span>
+      <span class="flags">
+        <img src="assets/img/flag-usa.png" alt="Estados Unidos">
+        <img src="assets/img/flag-mexico.png" alt="México">
+        <img src="assets/img/flag-colombia.png" alt="Colombia">
+        <img src="assets/img/flag-peru.png" alt="Perú">
+        <img src="assets/img/flag-rd.png" alt="República Dominicana">
+      </span>
+    </div>
+  </div>
+</section>
+
+<section class="benefits" id="beneficios">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">Beneficios reales</span>
+      <h2>Más que una olla: una herramienta para tu historial crediticio</h2>
+      <p>Estos son los beneficios verificados de tu financiamiento con nosotros. Sin promesas exageradas, solo hechos.</p>
+    </div>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <div class="num">1</div>
+        <h3>Reporte a las 3 agencias</h3>
+        <p>Tu financiamiento es respaldado por HYC Enterprises, que reporta tu comportamiento de pago a TransUnion, Experian y Equifax.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="num">2</div>
+        <h3>Cupón de descuento</h3>
+        <p>Cupón de $300 a $500 USD (según promoción vigente) aplicable a cualquier producto del catálogo participante.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="num">3</div>
+        <h3>Pagos flexibles</h3>
+        <p>Métodos de financiamiento que se adaptan a tu presupuesto, con cuotas mensuales cómodas.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="num">4</div>
+        <h3>Regalo de bienvenida</h3>
+        <p>Elige entre tazas de pared doble, tazones con tapa, cuchillo Santoku o termo de acero inoxidable (según disponibilidad).</p>
+      </div>
+    </div>
+    <div class="disclaimer-box">
+      <strong>Nota importante:</strong> pagar puntualmente ayuda a construir historial de crédito; los pagos atrasados también se reportan y pueden afectarlo negativamente. Este financiamiento es para la compra de producto, no es un préstamo en efectivo ni un programa gubernamental, y no garantiza un puntaje, plazo o resultado de crédito específico.
+    </div>
+  </div>
+</section>
+
+<section id="productos">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">Catálogo</span>
+      <h2>Sistemas de cocina Royal Prestige</h2>
+      <p>Acero quirúrgico T304, garantía de por vida en la mayoría de las piezas. Elige el sistema que mejor se adapte a tu hogar.</p>
+    </div>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="img-box"><img src="assets/img/producto-novel-10pz.png" alt="Sistema de cocina Novel 10 piezas"></div>
+        <div class="info">
+          <h3>Sistema Novel · 10 piezas</h3>
+          <p>Nuestro set más completo para el día a día: sartenes, ollas y tapas de alta capacidad.</p>
+          <a class="link-btn" href="#contacto">Ver plan de pago →</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="img-box"><img src="assets/img/producto-innove-10pz.png" alt="Sistema de cocina Innove 10 piezas"></div>
+        <div class="info">
+          <h3>Sistema Innove · 10 piezas</h3>
+          <p>Diseño moderno con recubrimiento antiadherente y mangos ergonómicos.</p>
+          <a class="link-btn" href="#contacto">Ver plan de pago →</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="img-box"><img src="assets/img/producto-deluxe.png" alt="Sistema de cocina Deluxe Easy Release"></div>
+        <div class="info">
+          <h3>Deluxe Easy Release</h3>
+          <p>Liberación fácil de alimentos, ideal para quienes buscan practicidad sin sacrificar calidad.</p>
+          <a class="link-btn" href="#contacto">Ver plan de pago →</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="img-box"><img src="assets/img/producto-cuchillos.png" alt="Set de cuchillos Royal Prestige"></div>
+        <div class="info">
+          <h3>Set de cuchillos All-in-One</h3>
+          <p>Cuchillos de acero forjado con bloque de almacenamiento, para cortes precisos.</p>
+          <a class="link-btn" href="#contacto">Ver plan de pago →</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="img-box"><img src="assets/img/producto-juicer.png" alt="Extractor de jugos Royal Prestige"></div>
+        <div class="info">
+          <h3>Extractor de jugos</h3>
+          <p>Extracción en frío para conservar nutrientes en tus jugos y batidos favoritos.</p>
+          <a class="link-btn" href="#contacto">Ver plan de pago →</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="img-box"><img src="assets/img/hero-olla-presion.jpeg" alt="Olla de presión Royal Prestige"></div>
+        <div class="info">
+          <h3>Olla de presión</h3>
+          <p>Cocina más rápido conservando sabor y nutrientes, con válvula de seguridad actualizada.</p>
+          <a class="link-btn" href="#contacto">Ver plan de pago →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="steps" id="como-funciona">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">Proceso simple</span>
+      <h2>Cómo funciona</h2>
+      <p>De la llamada al producto en tu cocina, en 4 pasos.</p>
+    </div>
+    <div class="step-grid">
+      <div class="step-card">
+        <div class="num">01</div>
+        <h3>Habla con un asesor</h3>
+        <p>Completa el formulario o escríbenos por WhatsApp. Un asesor te contacta el mismo día.</p>
+      </div>
+      <div class="step-card">
+        <div class="num">02</div>
+        <h3>Elige tu sistema</h3>
+        <p>Te mostramos el catálogo completo por WhatsApp y aplicamos tu cupón de descuento.</p>
+      </div>
+      <div class="step-card">
+        <div class="num">03</div>
+        <h3>Activa tu financiamiento</h3>
+        <p>Elige el pago mensual que te acomode. Tu historial de pago se reporta a las 3 agencias de crédito.</p>
+      </div>
+      <div class="step-card">
+        <div class="num">04</div>
+        <h3>Recibe tu producto y regalo</h3>
+        <p>Tu sistema de cocina llega a casa junto con tu regalo de bienvenida.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="warranty">
+      <img src="assets/img/garantia-50-anos.png" alt="Garantía de 50 años Royal Prestige">
+      <div>
+        <h3>Respaldados por décadas de trayectoria</h3>
+        <p>Royal Prestige ofrece garantía extendida en sus sistemas de cocina de acero quirúrgico T304. Un producto pensado para durar, no para reemplazar cada año.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="lead" id="contacto">
+  <div class="wrap lead-wrap">
+    <div>
+      <span class="tag" style="color:#ff5a72;">Empecemos</span>
+      <h2>Solicita tu cupón y arma tu plan de pago</h2>
+      <p>Déjanos tus datos y un asesor autorizado se comunica contigo en menos de 24 horas.</p>
+      <ul>
+        <li>Cupón de $300 a $500 USD aplicado a tu compra</li>
+        <li>Plan de pago mensual ajustado a tu presupuesto</li>
+        <li>Reporte de pagos a TransUnion, Experian y Equifax</li>
+        <li>Regalo de bienvenida al inscribirte</li>
+      </ul>
+    </div>
+
+    <form class="card" id="lead-form">
+      <div id="form-fields">
+        <h3>Cuéntanos de ti</h3>
+        <p class="sub">Solo toma 30 segundos.</p>
+
+        <div class="row-2">
+          <div class="field">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+          </div>
+          <div class="field">
+            <label for="telefono">Teléfono / WhatsApp</label>
+            <input type="tel" id="telefono" name="telefono" required placeholder="(555) 123-4567">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com">
+        </div>
+
+        <div class="row-2">
+          <div class="field">
+            <label for="estado">Estado (EE.UU.)</label>
+            <input type="text" id="estado" name="estado" required placeholder="Ej: Florida">
+          </div>
+          <div class="field">
+            <label for="producto">Producto de interés</label>
+            <select id="producto" name="producto">
+              <option value="">Selecciona (opcional)</option>
+              <option>Sistema Novel 10 pz</option>
+              <option>Sistema Innove 10 pz</option>
+              <option>Deluxe Easy Release</option>
+              <option>Set de cuchillos</option>
+              <option>Extractor de jugos</option>
+              <option>Olla de presión</option>
+              <option>No estoy seguro / quiero asesoría</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Enviar y hablar con un asesor</button>
+        <p class="legal-note">
+          Al enviar aceptas que un asesor de Royal Prestige te contacte por teléfono, WhatsApp o correo.
+          El financiamiento está sujeto a aprobación y su reporte a las agencias de crédito refleja tu comportamiento
+          de pago real (positivo o negativo). Esto no es un préstamo en efectivo, no es un programa gubernamental
+          y no garantiza un puntaje o resultado de crédito específico.
+        </p>
+      </div>
+
+      <div class="form-success" id="form-success">
+        <h3>¡Gracias, <span id="success-name">​</span>!</h3>
+        <p>Tu solicitud fue recibida. Ahora te llevamos a WhatsApp para continuar la conversación con un asesor.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <img src="assets/img/logo-royal-prestige.png" alt="Royal Prestige">
+        <p>Distribuidor autorizado de sistemas de cocina Royal Prestige en Estados Unidos. Financiamiento respaldado por HYC Enterprises.</p>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#productos">Productos</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <a id="wa-footer" href="#" target="_blank" rel="noopener">WhatsApp directo</a>
+        <a href="#contacto">Formulario de contacto</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© <span id="year"></span> Royal Prestige. Todos los derechos reservados. Royal Prestige® es una marca registrada de sus respectivos propietarios; este es un sitio de distribuidor independiente autorizado.</div>
+      <div class="footer-legal">
+        El financiamiento ofrecido es para la compra de producto y está sujeto a aprobación. El reporte a las agencias de crédito (TransUnion, Experian, Equifax) refleja el historial de pago real del cliente, positivo o negativo, y no constituye una garantía de mejora de puntaje crediticio, aprobación de crédito externo, vivienda, vehículo ni ningún otro resultado. Este programa no está afiliado a ninguna entidad gubernamental ni resuelve trámites migratorios o legales.
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" id="wa-float" href="#" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">💬</a>
+
+<script>
+  // ======= CONFIGURACIÓN =======
+  var WHATSAPP_NUMBER = "15555555555"; // TODO: reemplaza por tu número real, formato internacional sin "+"
+  var DEFAULT_WA_MESSAGE = "Hola, vi la página de Royal Prestige y quiero información sobre el cupón de descuento y el plan de pago.";
+
+  function buildWaLink(message){
+    return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
+  }
+
+  document.getElementById("wa-hero").href = buildWaLink(DEFAULT_WA_MESSAGE);
+  document.getElementById("wa-footer").href = buildWaLink(DEFAULT_WA_MESSAGE);
+  document.getElementById("wa-float").href = buildWaLink(DEFAULT_WA_MESSAGE);
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  document.getElementById("lead-form").addEventListener("submit", function(e){
+    e.preventDefault();
+    var nombre = document.getElementById("nombre").value.trim();
+    var telefono = document.getElementById("telefono").value.trim();
+    var estado = document.getElementById("estado").value.trim();
+    var producto = document.getElementById("producto").value;
+
+    var msg = "Hola, soy " + nombre + " (" + estado + "). Mi teléfono es " + telefono + ".";
+    if (producto) { msg += " Me interesa: " + producto + "."; }
+    msg += " Quiero información sobre el cupón de descuento y el plan de pago.";
+
+    document.getElementById("form-fields").style.display = "none";
+    var success = document.getElementById("form-success");
+    document.getElementById("success-name").textContent = nombre;
+    success.classList.add("show");
+
+    setTimeout(function(){
+      window.open(buildWaLink(msg), "_blank");
+    }, 900);
+  });
+</script>
+
+</body>
+</html>
