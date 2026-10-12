@@ -1,6 +1,6 @@
 // Páginas Royal Prestige (app React en jsDelivr): portada "/", embudo "/cupon/" y "/gracias/".
 // $rp_live = false -> solo se ven con ?rp_preview=1 en cualquier dirección
-// $rp_live = true  -> la portada la ven los visitantes sin sesión; /cupon/, /clientes/ y /gracias/ las ve todo el mundo
+// $rp_live = true  -> la portada, /cupon/, /clientes/ y /gracias/ las ve todo el mundo
 $rp_live     = true;
 $rp_pixel_id = ''; // ID del Pixel de Meta (solo números). Vacío = sin Pixel.
 
@@ -12,7 +12,7 @@ add_action( 'template_redirect', function () use ( $rp_live, $rp_pixel_id ) {
 	$path    = trim( (string) wp_parse_url( $uri, PHP_URL_PATH ), '/' );
 	$preview = isset( $_GET['rp_preview'] );
 	$funnel  = in_array( $path, array( 'cupon', 'clientes', 'gracias' ), true );
-	$front   = ( is_front_page() || is_home() ) && ! is_user_logged_in();
+	$front   = is_front_page() || is_home();
 	if ( ! $preview && ! ( $rp_live && ( $front || $funnel ) ) ) {
 		return;
 	}
