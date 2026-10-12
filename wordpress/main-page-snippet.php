@@ -39,6 +39,10 @@ add_action( 'template_redirect', function () use ( $rp_live, $rp_pixel_id ) {
 		$pixel = '<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","' . $rp_pixel_id . '");fbq("track","PageView");</script><noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=' . $rp_pixel_id . '&amp;ev=PageView&amp;noscript=1"></noscript>';
 	}
 
+	if ( ! defined( 'DONOTCACHEPAGE' ) ) {
+		define( 'DONOTCACHEPAGE', true );
+	}
+	do_action( 'litespeed_control_set_nocache', 'Royal Prestige app' );
 	nocache_headers();
 	header( 'X-LiteSpeed-Cache-Control: no-cache' );
 	header( 'Content-Type: text/html; charset=utf-8' );
