@@ -35,7 +35,7 @@ add_action( 'template_redirect', function () use ( $rp_live ) {
 <body>
 <div id="root"></div>
 <noscript><p style="font-family:sans-serif;padding:24px">Activa JavaScript para ver esta página, o escríbenos por <a href="https://wa.me/19705454299">WhatsApp</a>.</p></noscript>
-<script type="module" src="https://cdn.jsdelivr.net/gh/creativosvirales/tifferd@67cba3db80db3850127a73d22503a9aeb47c0d5e/cdn/app.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/creativosvirales/tifferd@5edbddfb510dbf03650e6413f272f6389cc6f39f/cdn/app.js"></script>
 </body>
 </html>
 RPAPP;
