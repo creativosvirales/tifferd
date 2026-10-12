@@ -8,6 +8,7 @@ $rp_lead_fields = array(
 	'email'        => 'Correo',
 	'estado'       => 'Estado',
 	'producto'     => 'Producto de interés',
+	'regalo'       => 'Regalo elegido',
 	'consent_at'   => 'Aceptó ser contactado',
 	'variant'      => 'Formulario',
 	'page'         => 'Página',
@@ -160,7 +161,7 @@ add_action( 'admin_post_rp_leads_export', function () use ( $rp_status_options )
 	header( 'Content-Disposition: attachment; filename="leads-' . gmdate( 'Y-m-d' ) . '.csv"' );
 	$out = fopen( 'php://output', 'w' );
 	fwrite( $out, "\xEF\xBB\xBF" );
-	$head = array( 'Fecha', 'Nombre', 'Teléfono', 'Correo', 'Estado (EE.UU.)', 'Producto', 'Seguimiento', 'Notas', 'Formulario', 'Página', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'Referido desde' );
+	$head = array( 'Fecha', 'Nombre', 'Teléfono', 'Correo', 'Estado (EE.UU.)', 'Producto', 'Regalo elegido', 'Seguimiento', 'Notas', 'Formulario', 'Página', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'Referido desde' );
 	fputcsv( $out, $head, ',', '"', '\\' );
 	$safe = function ( $v ) {
 		$v = (string) $v;
@@ -177,6 +178,7 @@ add_action( 'admin_post_rp_leads_export', function () use ( $rp_status_options )
 			get_post_meta( $id, 'email', true ),
 			get_post_meta( $id, 'estado', true ),
 			get_post_meta( $id, 'producto', true ),
+			get_post_meta( $id, 'regalo', true ),
 			$rp_status_options[ $st ],
 			get_post_meta( $id, 'rp_notes', true ),
 			get_post_meta( $id, 'variant', true ),
