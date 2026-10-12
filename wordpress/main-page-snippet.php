@@ -1,6 +1,6 @@
 // Páginas Royal Prestige (app React en jsDelivr): portada "/", embudo "/cupon/" y "/gracias/".
 // $rp_live = false -> solo se ven con ?rp_preview=1 en cualquier dirección
-// $rp_live = true  -> la portada la ven los visitantes sin sesión; /cupon/, /credito/ y /gracias/ las ve todo el mundo
+// $rp_live = true  -> la portada la ven los visitantes sin sesión; /cupon/, /clientes/ y /gracias/ las ve todo el mundo
 $rp_live     = true;
 $rp_pixel_id = ''; // ID del Pixel de Meta (solo números). Vacío = sin Pixel.
 
@@ -11,7 +11,7 @@ add_action( 'template_redirect', function () use ( $rp_live, $rp_pixel_id ) {
 	$uri     = isset( $_SERVER['REQUEST_URI'] ) ? $_SERVER['REQUEST_URI'] : '/';
 	$path    = trim( (string) wp_parse_url( $uri, PHP_URL_PATH ), '/' );
 	$preview = isset( $_GET['rp_preview'] );
-	$funnel  = in_array( $path, array( 'cupon', 'credito', 'gracias' ), true );
+	$funnel  = in_array( $path, array( 'cupon', 'clientes', 'gracias' ), true );
 	$front   = ( is_front_page() || is_home() ) && ! is_user_logged_in();
 	if ( ! $preview && ! ( $rp_live && ( $front || $funnel ) ) ) {
 		return;
@@ -24,7 +24,7 @@ add_action( 'template_redirect', function () use ( $rp_live, $rp_pixel_id ) {
 		$title   = 'Cupón Royal Prestige de hasta $500 | Solicítalo hoy';
 		$desc    = 'Solicita tu cupón de $300 a $500 USD en sistemas de cocina Royal Prestige. Financiamiento con pagos mensuales reportados a las agencias de crédito y regalo de bienvenida.';
 		$noindex = true;
-	} elseif ( 'credito' === $path ) {
+	} elseif ( 'clientes' === $path ) {
 		$title   = 'Historial de crédito y cocina Royal Prestige | Solicita tu cupón';
 		$desc    = 'Financiamiento de sistemas de cocina Royal Prestige con pagos reportados a TransUnion, Experian y Equifax. Cupón de $300 a $500 USD y regalo de bienvenida.';
 		$noindex = true;
@@ -62,12 +62,12 @@ add_action( 'template_redirect', function () use ( $rp_live, $rp_pixel_id ) {
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/creativosvirales/tifferd@0ece6ac74930c947a66ad8364032b2526cddf91e/cdn/assets/img/hero-set-royal-real.jpg">
 {{PIXEL}}
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativosvirales/tifferd@0dc31eb7f461b04a46082b44dfef576c90921700/cdn/app.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativosvirales/tifferd@96f44c34f0818b28aff366d801a2a499c5b11213/cdn/app.css">
 </head>
 <body>
 <div id="root"></div>
 <noscript><p style="font-family:sans-serif;padding:24px">Activa JavaScript para ver esta página, o escríbenos por <a href="https://wa.me/19705454299">WhatsApp</a>.</p></noscript>
-<script type="module" src="https://cdn.jsdelivr.net/gh/creativosvirales/tifferd@0dc31eb7f461b04a46082b44dfef576c90921700/cdn/app.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/creativosvirales/tifferd@96f44c34f0818b28aff366d801a2a499c5b11213/cdn/app.js"></script>
 </body>
 </html>
 RPAPP;
