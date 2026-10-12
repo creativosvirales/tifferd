@@ -30,12 +30,12 @@ add_action( 'template_redirect', function () use ( $rp_live ) {
 <meta property="og:description" content="Financiamiento flexible que reporta a las agencias de crédito. Cupón de descuento y regalo de bienvenida.">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/creativosvirales/tifferd@0ece6ac74930c947a66ad8364032b2526cddf91e/cdn/assets/img/hero-set-royal-real.jpg">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativosvirales/tifferd@67cba3db80db3850127a73d22503a9aeb47c0d5e/cdn/app.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativosvirales/tifferd@6a022db132947b1338ae5ad871af53178de1ccfa/cdn/app.css">
 </head>
 <body>
 <div id="root"></div>
 <noscript><p style="font-family:sans-serif;padding:24px">Activa JavaScript para ver esta página, o escríbenos por <a href="https://wa.me/19705454299">WhatsApp</a>.</p></noscript>
-<script type="module" src="https://cdn.jsdelivr.net/gh/creativosvirales/tifferd@5edbddfb510dbf03650e6413f272f6389cc6f39f/cdn/app.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/creativosvirales/tifferd@6a022db132947b1338ae5ad871af53178de1ccfa/cdn/app.js"></script>
 </body>
 </html>
 RPAPP;
