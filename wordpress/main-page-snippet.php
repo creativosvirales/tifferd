@@ -62,12 +62,12 @@ add_action( 'template_redirect', function () use ( $rp_live, $rp_pixel_id ) {
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/creativosvirales/tifferd@0ece6ac74930c947a66ad8364032b2526cddf91e/cdn/assets/img/hero-set-royal-real.jpg">
 {{PIXEL}}
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativosvirales/tifferd@23affc0b56515e8b73dfcbbe5b5f0a6f70ad1b77/cdn/app.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativosvirales/tifferd@68607490aa4b9585d0c4fc43c981536a1aff324c/cdn/app.css">
 </head>
 <body>
 <div id="root"></div>
 <noscript><p style="font-family:sans-serif;padding:24px">Activa JavaScript para ver esta página, o escríbenos por <a href="https://wa.me/19705454299">WhatsApp</a>.</p></noscript>
-<script type="module" src="https://cdn.jsdelivr.net/gh/creativosvirales/tifferd@23affc0b56515e8b73dfcbbe5b5f0a6f70ad1b77/cdn/app.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/gh/creativosvirales/tifferd@68607490aa4b9585d0c4fc43c981536a1aff324c/cdn/app.js"></script>
 </body>
 </html>
 RPAPP;
