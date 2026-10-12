@@ -1,7 +1,7 @@
 // Página principal Royal Prestige (app React) servida desde jsDelivr.
 // $rp_live = false -> solo se ve en https://prestigesolution.us/?rp_preview=1
 // $rp_live = true  -> la ven todos los visitantes (sin sesión) en la portada "/"
-$rp_live = false;
+$rp_live = true;
 
 add_action( 'template_redirect', function () use ( $rp_live ) {
 	if ( is_admin() || wp_doing_ajax() || wp_doing_cron() || ( defined( 'REST_REQUEST' ) && REST_REQUEST ) ) {
